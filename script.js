@@ -1,3 +1,7 @@
+(() => {
+if (window.__bibiSiteInitialized) return;
+window.__bibiSiteInitialized = true;
+
 const root = document.documentElement;
 const themeToggle = document.querySelector(".theme-toggle");
 const menuToggle = document.querySelector(".menu-toggle");
@@ -65,3 +69,4 @@ window.addEventListener("mousemove", (event) => {
   const y = (event.clientY / window.innerHeight - 0.5) * 10;
   visual.style.transform = `translate3d(${x}px, ${y}px, 0)`;
 });
+})();
